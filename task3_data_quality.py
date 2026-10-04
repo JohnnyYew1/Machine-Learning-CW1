@@ -18,9 +18,9 @@ print("=" * 60)
 
 
 # ==========================================================
-# 3.1 Missing Values and Structural Missingness
+# Missing Values and Structural Missingness
 # ==========================================================
-print("\n========== 3.1 Missing Values Summary ==========")
+print("\n========== Missing Values Summary ==========")
 
 missing_df = pd.DataFrame({
     "Missing Values": df.isnull().sum(),
@@ -38,9 +38,9 @@ print(missing_df)
 
 
 # ==========================================================
-# 3.2 Class Imbalance
+# Class Imbalance
 # ==========================================================
-print("\n========== 3.2 Class Imbalance ==========")
+print("\n========== Class Imbalance ==========")
 
 class_summary = pd.DataFrame({
     "Count": df["Churn Label"].value_counts(),
@@ -63,7 +63,7 @@ ax = sns.countplot(
     legend=False
 )
 
-plt.title("Figure 3.1: Churn Label Distribution")
+plt.title("Churn Label Distribution")
 plt.xlabel("Churn Label")
 plt.ylabel("Count")
 
@@ -89,10 +89,10 @@ plt.show()
 
 
 # ==========================================================
-# 3.3 Correlation and Multicollinearity
+# Correlation and Multicollinearity
 # ==========================================================
 print(
-    "\n========== 3.3 Correlation and "
+    "\n========== Correlation and "
     "Multicollinearity =========="
 )
 
@@ -124,8 +124,7 @@ sns.heatmap(
 )
 
 plt.title(
-    "Figure 3.2: Correlation Heatmap "
-    "of Selected Numerical Features"
+    "Correlation Heatmap of Selected Numerical Features"
 )
 
 plt.tight_layout()
@@ -161,9 +160,9 @@ print(vif_df)
 
 
 # ==========================================================
-# 3.4 Skewness and Potential Outliers
+# Skewness and Potential Outliers
 # ==========================================================
-print("\n========== 3.4 Skewness Summary ==========")
+print("\n========== Skewness Summary ==========")
 
 skew_cols = [
     "Total Refunds",
@@ -215,8 +214,7 @@ axes[1].set_title(
 )
 
 plt.suptitle(
-    "Figure 3.3: Distribution and "
-    "Outliers of Total Revenue"
+    "Distribution and Outliers of Total Revenue"
 )
 
 plt.tight_layout()
@@ -224,9 +222,9 @@ plt.show()
 
 
 # ==========================================================
-# 3.5 Duplicate Records
+# Duplicate Records
 # ==========================================================
-print("\n========== 3.5 Duplicate Records ==========")
+print("\n========== Duplicate Records ==========")
 
 duplicate_count = df.duplicated().sum()
 
@@ -237,10 +235,10 @@ print(
 
 
 # ==========================================================
-# 3.6 Basic Data Consistency Checks
+# Basic Data Consistency Checks
 # ==========================================================
 print(
-    "\n========== 3.6 Data Consistency Checks =========="
+    "\n========== Data Consistency Checks =========="
 )
 
 categorical_cols = (

@@ -9,7 +9,7 @@ from imblearn.over_sampling import SMOTENC
 
 
 # ==========================================================
-# 1. DATA CLEANING AND FEATURE SELECTION
+# DATA CLEANING AND FEATURE SELECTION
 # ==========================================================
 
 df = pd.read_csv("telco.csv")
@@ -17,7 +17,7 @@ df = pd.read_csv("telco.csv")
 sns.set_theme(style="whitegrid")
 
 print("=" * 60)
-print("TASK 4: DATA PREPROCESSING")
+print("DATA PREPROCESSING")
 print("=" * 60)
 
 print(f"Original Dataset Shape: {df.shape}")
@@ -80,7 +80,7 @@ y = df_clean[
 
 
 # ==========================================================
-# 2. STRATIFIED SPLIT AND MISSING-VALUE HANDLING
+# STRATIFIED SPLIT AND MISSING-VALUE HANDLING
 # ==========================================================
 
 X_train, X_test, y_train, y_test = train_test_split(
@@ -165,8 +165,7 @@ for col in categorical_cols:
 
 
 # ==========================================================
-# FIGURE 4.1 EVIDENCE
-# Preprocessing setup summary
+# PREPROCESSING SETUP SUMMARY
 # ==========================================================
 
 print("\n" + "=" * 60)
@@ -211,7 +210,7 @@ print(y_test.value_counts())
 
 
 # ==========================================================
-# 3. TRANSFORMATION AND SCALING
+# TRANSFORMATION AND SCALING
 # ==========================================================
 
 print("\n" + "=" * 60)
@@ -274,7 +273,6 @@ print(
 
 
 # ----------------------------------------------------------
-# Figure 4.2:
 # Skewness before and after Log1p
 # ----------------------------------------------------------
 
@@ -288,7 +286,7 @@ skew_plot.plot(
 )
 
 plt.title(
-    "Figure 4.2: Skewness Before and After Log1p"
+    "Skewness Before and After Log1p"
 )
 
 plt.ylabel("Skewness")
@@ -332,7 +330,7 @@ print(
 
 
 # ==========================================================
-# 4. CLASS BALANCING AND CATEGORICAL ENCODING
+# CLASS BALANCING AND CATEGORICAL ENCODING
 # ==========================================================
 
 print("\n" + "=" * 60)
@@ -489,8 +487,7 @@ X_test_final = pd.concat(
 
 
 # ==========================================================
-# FIGURE 4.3 EVIDENCE
-# Encoding summary
+# ENCODING SUMMARY
 # ==========================================================
 
 print("\n" + "=" * 60)
@@ -524,8 +521,7 @@ print(
 
 
 # ==========================================================
-# FIGURE 4.4
-# Class Distribution Before and After SMOTENC
+# CLASS DISTRIBUTION BEFORE AND AFTER SMOTENC
 # ==========================================================
 
 fig, axes = plt.subplots(
@@ -625,8 +621,7 @@ for bar in ax2.patches:
 
 
 plt.suptitle(
-    "Figure 4.4: Class Distribution "
-    "Before and After SMOTENC"
+    "Class Distribution Before and After SMOTENC"
 )
 
 plt.tight_layout()
@@ -635,7 +630,7 @@ plt.show()
 
 
 # ==========================================================
-# 5. FINAL PREPROCESSING SUMMARY
+# FINAL PREPROCESSING SUMMARY
 # ==========================================================
 
 print("\n" + "=" * 60)
